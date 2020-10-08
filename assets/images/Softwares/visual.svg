@@ -1,0 +1,59 @@
+<<<<<<< HEAD
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #2789ca;
+      }
+
+      .cls-2 {
+        fill: #1171b3;
+      }
+
+      .cls-3 {
+        fill: #0978b9;
+      }
+
+      .cls-4 {
+        fill: #3c99d4;
+      }
+    </style>
+  </defs>
+  <title>visual</title>
+  <g>
+    <path class="cls-1" d="M-.24,12.93s-1-.71.2-1.66L2.68,8.81a1.15,1.15,0,0,1,1.6-.11L29.42,27.94v9.22s0,1.45-1.85,1.29Z" transform="translate(0.62 1.02)"/>
+    <path class="cls-2" d="M6.24,18.88-.24,24.83s-.66.5,0,1.39l3,2.77s.71.78,1.77-.11l6.87-5.26Z" transform="translate(0.62 1.02)"/>
+    <path class="cls-3" d="M17.61,18.92,29.5,9.75,29.42.58s-.51-2-2.2-1L11.41,14.16Z" transform="translate(0.62 1.02)"/>
+    <path class="cls-4" d="M27.57,38.46a1.59,1.59,0,0,0,1.52.48l9.26-4.61a2,2,0,0,0,1-1.83V5a1.84,1.84,0,0,0-1.22-1.63l-8-3.91a2.22,2.22,0,0,0-2.9.2s1.48-1.08,2.2,1V37a1.57,1.57,0,0,1-.16.71c-.21.43-.67.84-1.77.67Z" transform="translate(0.62 1.02)"/>
+  </g>
+</svg>
+=======
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #2789ca;
+      }
+
+      .cls-2 {
+        fill: #1171b3;
+      }
+
+      .cls-3 {
+        fill: #0978b9;
+      }
+
+      .cls-4 {
+        fill: #3c99d4;
+      }
+    </style>
+  </defs>
+  <title>visual</title>
+  <g>
+    <path class="cls-1" d="M-.24,12.93s-1-.71.2-1.66L2.68,8.81a1.15,1.15,0,0,1,1.6-.11L29.42,27.94v9.22s0,1.45-1.85,1.29Z" transform="translate(0.62 1.02)"/>
+    <path class="cls-2" d="M6.24,18.88-.24,24.83s-.66.5,0,1.39l3,2.77s.71.78,1.77-.11l6.87-5.26Z" transform="translate(0.62 1.02)"/>
+    <path class="cls-3" d="M17.61,18.92,29.5,9.75,29.42.58s-.51-2-2.2-1L11.41,14.16Z" transform="translate(0.62 1.02)"/>
+    <path class="cls-4" d="M27.57,38.46a1.59,1.59,0,0,0,1.52.48l9.26-4.61a2,2,0,0,0,1-1.83V5a1.84,1.84,0,0,0-1.22-1.63l-8-3.91a2.22,2.22,0,0,0-2.9.2s1.48-1.08,2.2,1V37a1.57,1.57,0,0,1-.16.71c-.21.43-.67.84-1.77.67Z" transform="translate(0.62 1.02)"/>
+  </g>
+</svg>
+>>>>>>> 57dd49a1807026a42687174433b158d05ad749bc
