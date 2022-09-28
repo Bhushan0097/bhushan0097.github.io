@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Backup UI TOOL</title>
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Backup UI TOOL">
+    <meta name="author" content="Buddhabhushan Nagrale">    
+    <link rel="shortcut icon" href="icon.png">  
+    
+    <link href='https://fonts.googleapis.com/css?family=Lato:300,400,300italic,400italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'> 
+    
+    <!-- FontAwesome JS -->
+    <script defer src="assets/fontawesome/js/all.js"></script>
+    
+    <!-- Global CSS -->
+    <link rel="stylesheet" href="assets/plugins/bootstrap/css/bootstrap.min.css">   
+     	
+    <!-- Theme CSS -->  
+	
+	  
+   
+</head>
+
+
+
+
+<body>
+<br>
+    <div class="container text-center">  
+        <h3>Backup UI Tool</h3> 
+        
+          <p id="p1"> </p>
+ 
+    </div>
+        
+    <div class="container">
+        
+      <form >
+        <div class="form-row">
+          <div class="form-group col-md-4 ">
+		  
+	
+            <label for="inputCDSID">CDSID </label>
+            <input type="text" class="form-control" id="inputCDSID" placeholder=" ">
+		
+          </div>
+		   
+          <div class="form-group col-md-4"> </div>
+          <br>
+           <div class="form-group col-md-4">
+           <b> <p id="date"> </p> </b>
+           
+          </div>
+        </div>
+
+        <div class="form-row">
+        <div class="form-group col-md-4">
+          <label for="inputCalls/Chat">Calls/Chat</label>
+          <select id="inputCalls/Chat" class="form-control">
+            <option value="Calls">Calls</option>
+            <option value="Chat">Chat</option>
+         </select>
+        </div>
+		     <div class="form-group col-md-4"> </div>
+		    <div class="form-group col-md-4">
+            <label for="inputPhone">Phone Number</label>
+            <input type="text" class="form-control" id="inputPhone" placeholder=" ">
+          </div>
+      </div>
+
+        <div class="form-row">
+          <div class="form-group col-md-4">
+            <label for="inputETicket">Existing Ticket </label>
+            <select id="inputETicket" class="form-control">
+              <option value="No">No</option>
+              <option value="Yes">Yes</option>
+           </select>
+          </div>
+        
+        </div>
+
+        <div class="form-row">
+        <div class="form-group col-md-6" >
+          <label for="inputDescription">Description</label>
+          <textarea class="form-control" rows="5" id="inputDescription">   </textarea>
+        </div>
+        
+        <div class="form-group col-md-2"> </div>
+        <div class="form-group col-md-4">
+          <label for="inputSDescription">Short Description</label>
+          <input type="text" class="form-control" id="inputSDescription" placeholder=" ">
+		  <br>
+		       <label for="inputKBA">KBA</label>
+          <input type="text" class="form-control" id="inputKBA" placeholder=" ">
+        </div>
+        
+      </div>
+
+      <div class="form-row">
+        <div class="form-group col-md-4">
+          <label for="Ticket">Ticket Number </label>
+          <input type="text" class="form-control" id="inputTicket" placeholder=" ">
+        </div>
+        <div class="form-group col-md-4"> </div>
+
+        <div class="form-group col-md-4">
+          <label for="inputResolved">Issue Resolved</label>
+          <select id="inputResolved" class="form-control">
+            <option value="No">No</option>
+            <option value="Yes">Yes</option>
+         </select>
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group col-md-4">
+          <label for="inputEscalalted">Escalalted :</label>
+          <select id="inputEscalalted" class="form-control">
+            <option value="No">No</option>
+            <option value="Yes">Yes</option>
+         </select>
+        </div>
+        <div class="form-group col-md-4"> </div>
+
+        <div class="form-group col-md-4">
+          <label for="inputEscalaltedto"> Escalalted to </label>
+           <input type="text" class="form-control" id="inputEscalaltedto" placeholder=" ">
+         </select>
+        </div>
+      </div>
+	  <br>
+         <!--Add to button to save the data.-->
+		 <center>
+			<div class="form-row text-center ">
+		
+			 <div class="form-group col-md-1"> </div>	 
+          <button type="button" class="btn btn-info col-md-2" id="savebutton"  onclick="saveFile()"> Save data to file </button>
+				 <div class="form-group col-md-1"> </div>	
+          <button type="button" class="btn btn-success col-md-2" id="savebutton"  onclick="copyData()"> &nbsp; &nbsp;&nbsp; Copy &nbsp; &nbsp;&nbsp; </button>
+		 <div class="form-group col-md-1"> </div>
+          <button type="button" class="btn btn-danger col-md-2" id="savebutton"  onclick="location.reload()"> &nbsp; &nbsp;&nbsp;Reset &nbsp; &nbsp;&nbsp; </button>
+ <div class="form-group col-md-1"> </div>
+			<button type="button" class="btn btn-warning col-md-2" id="savebutton"  onclick="Export()"> &nbsp; &nbsp;&nbsp;Export Logs &nbsp; &nbsp;&nbsp; </button>
+	
+			</div>
+	   	</center>
+      </div>
+      </form>
+   
+      
+      </div>
+</body>
+
+<script> 
+
+
+const today = new Date();
+const date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
+const time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+const dateTime = date+' '+time;
+document.getElementById("p1"),innerHTML = dateTime
+
+function addZero(i) {
+  if (i < 10) {i = "0" + i}
+  return i;
+}
+
+var n =  new Date();
+y = n.getFullYear();
+m = n.getMonth() + 1;
+d = n.getDate();
+
+hrs = addZero(n.getHours());
+mins = addZero(n.getMinutes());
+sec = addZero(n.getSeconds());
+ 
+
+DateTime = document.getElementById("date").innerHTML = d + "/" + m + "/" + y + " " +  hrs + ":" + mins + ":" + sec ;
+
+let saveFile = () => {
+
+        // Get the data from each element on the form.
+       const CDSID = document.getElementById('inputCDSID');
+        const Phone = document.getElementById('inputPhone');
+        const Calls_Chat = document.getElementById('inputCalls/Chat');
+        const ETicket = document.getElementById('inputETicket');
+        const SDescription = document.getElementById('inputSDescription'); 
+        const Ticket = document.getElementById('inputTicket'); 
+        const Description = document.getElementById('inputDescription'); 
+        const Resolved = document.getElementById('inputResolved'); 
+        const Escalalted = document.getElementById('inputEscalalted'); 
+        const Escalaltedto = document.getElementById('inputEscalaltedto'); 
+		const KBA = document.getElementById('inputKBA'); 
+        
+        // This variable stores all the data.
+        let data = 
+            '\r CDSID: ' + CDSID.value + ' \r\n ' + 
+            'Phone: ' +Phone.value + ' \r\n ' +  
+			'DateTime: ' +DateTime + ' \r\n ' +  
+            'Calls/Chat: ' + Calls_Chat.value + ' \r\n ' + 
+            'Existing Ticket: ' + ETicket.value + ' \r\n ' + 
+            'Short Description: ' + SDescription.value + ' \r\n ' + 
+            'Ticket:' + Ticket.value + ' \r\n ' + 
+            'Description:'  + Description.value + ' \r\n ' + 
+			'Ticket:' + Ticket.value + ' \r\n ' + 
+            'Resolved:' + Resolved.value + ' \r\n ' + 
+            'Escalalted:'  + Escalalted.value + ' \r\n ' + 
+            'Escalaltedto:'  + Escalaltedto.value + ' \r\n ' ;
+        
+        // Convert the text to BLOB.
+        const textToBLOB = new Blob([data], { type: 'text/plain' });
+        const sFileName =  DateTime+" "+CDSID.value +'.txt';	   // The file to save the data.
+  
+        let newLink = document.createElement("a");
+        newLink.download = sFileName;
+  
+        if (window.webkitURL != null) {
+            newLink.href = window.webkitURL.createObjectURL(textToBLOB);
+        }
+        else {
+            newLink.href = window.URL.createObjectURL(textToBLOB);
+            newLink.style.display = "none";
+            document.body.appendChild(newLink);
+        }
+  
+        newLink.click(); 
+    }
+	
+	function copyData() {
+	 // Get the data from each element on the form.
+       const CDSID = document.getElementById('inputCDSID');
+        const Phone = document.getElementById('inputPhone');
+        const Calls_Chat = document.getElementById('inputCalls/Chat');
+        const ETicket = document.getElementById('inputETicket');
+        const SDescription = document.getElementById('inputSDescription'); 
+        const Ticket = document.getElementById('inputTicket'); 
+        const Description = document.getElementById('inputDescription'); 
+        const Resolved = document.getElementById('inputResolved'); 
+        const Escalalted = document.getElementById('inputEscalalted'); 
+        const Escalaltedto = document.getElementById('inputEscalaltedto'); 
+		const KBA = document.getElementById('inputKBA'); 
+        
+        // This variable stores all the data.
+        let data = 
+            '\r CDSID: ' + CDSID.value + ' \r\n ' + 
+            'Phone: ' +Phone.value + ' \r\n ' +  
+			'DateTime: ' +DateTime + ' \r\n ' +  
+            'Calls/Chat: ' + Calls_Chat.value + ' \r\n ' + 
+            'Existing Ticket: ' + ETicket.value + ' \r\n ' + 
+            'Short Description: ' + SDescription.value + ' \r\n ' + 
+			'KBA:'  + KBA.value + ' \r\n ' +
+            'Description:'  + Description.value + ' \r\n ' + 
+			'Ticket:' + Ticket.value + ' \r\n ' + 
+            'Resolved:' + Resolved.value + ' \r\n ' + 
+            'Escalalted:'  + Escalalted.value + ' \r\n ' + 
+            'Escalaltedto:'  + Escalaltedto.value + ' \r\n ' ;
+
+
+  /* Copy the text inside the text field */
+  navigator.clipboard.writeText(data);
+  }
+  
+ 
+  
+
+
+
+  
+  
+  </script>
+</html>
