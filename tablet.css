@@ -1,0 +1,30 @@
+
+@media only screen and (max-width : 950px){
+    .container{
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.5fr 2.0fr 2.2fr 2.2fr 1.2fr 0.5fr;
+        grid-template-areas: 
+        "nav " 
+    "main "
+    "about"
+    "content1"
+    "content2"
+   
+    "footer";
+    }
+
+    nav{
+        background-image: none;
+        background-color: greenyellow;
+        height: 40px;
+        grid-area: nav;
+    }
+
+    main{
+        background-image: none;
+        background-color: red;
+        height: 600px;
+        grid-area:main;
+    }
+}
+

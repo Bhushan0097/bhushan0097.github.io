@@ -1,0 +1,53 @@
+@font-face {
+    font-family: myFirstFont;
+    src: url(assests/Poppins/Poppins-Regular.ttf);
+
+   
+  }
+
+  @font-face {
+    font-family: Poppins-Regular;
+    src: url(assests/Poppins/Poppins-Medium.ttf);
+
+   
+  }
+  
+  @font-face {
+    font-family: Poppins-Light;
+    src: url(assests/Poppins/Poppins-Light.ttf);
+
+   
+  }
+
+  @font-face {
+    font-family: Poppins-Bold;
+    src: url(assests/Poppins/Poppins-Bold.ttf);
+
+   
+  }
+
+  
+  @font-face {
+    font-family: Poppins-SemiBold;
+    src: url(assests/Poppins/Poppins-SemiBold.ttf);
+
+   
+  }
+
+
+  @font-face {
+
+    font-family: Lato;
+    src: url(assests/Lato/Lato-Light.ttf);
+  }
+
+
+*,
+
+*:before,
+
+*:after{
+    padding: 0;
+    margin : 0;
+    
+}

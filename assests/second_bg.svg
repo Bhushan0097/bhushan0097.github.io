@@ -1,0 +1,32 @@
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+        stroke: #fff;
+        stroke-miterlimit: 10;
+        stroke-width: 0.1px;
+        opacity: 0.28;
+      }
+
+      .cls-2 {
+        fill: #1f374a;
+      }
+
+      .cls-3 {
+        fill: #fff;
+        opacity: 0.1;
+      }
+    </style>
+  </defs>
+  <title>second_bg</title>
+  <g>
+    <polyline class="cls-1" points="1938.5 1081 -11.4 1081 -11.4 -2 1938.5 -2"/>
+    <rect class="cls-2" x="-18" y="-1.5" width="1949.9" height="1083"/>
+    <rect class="cls-3" x="227.51" y="-2.5" width="2.03" height="1084"/>
+    <rect class="cls-3" x="593.12" y="-2.5" width="2.03" height="1084"/>
+    <rect class="cls-3" x="958.73" y="-2.5" width="2.03" height="1084"/>
+    <rect class="cls-3" x="1324.33" y="-2.5" width="2.03" height="1084"/>
+    <rect class="cls-3" x="1689.94" y="-2.5" width="2.03" height="1084"/>
+  </g>
+</svg>
