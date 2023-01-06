@@ -1,4 +1,8 @@
-@media only screen and (max-width : 550px){
+@media only screen 
+  and (min-device-width: 270px) 
+  and (max-device-width: 550px)
+  and (-webkit-min-device-pixel-ratio: 2) 
+{
     .container{
         grid-template-columns: 1fr;
         grid-template-rows: 0.5fr 2.0fr 2.2fr 2.2fr 1.2fr 0.5fr;
@@ -139,8 +143,9 @@
     }
 
     .about_text{
-       
+        margin-left: 0px;
         width: 100%;
+        padding-left: 2px;
     
     }
 
@@ -163,8 +168,7 @@
     }
 
     #content4{
-        height: 700px; 
-    
+        height: 900px; 
     }
    
 }
