@@ -1,7 +1,5 @@
-@media only screen 
-  and (min-device-width: 270px) 
-  and (max-device-width: 550px)
-  and (-webkit-min-device-pixel-ratio: 2) 
+@media(min-width:279px)and (max-width: 550px)
+
 {
     .container{
         grid-template-columns: 1fr;
@@ -115,6 +113,7 @@
     
     
 .about_main{
+    
     flex-direction:column; 
 
 }
@@ -123,31 +122,74 @@
     display: none;
 }
     .about_title{ 
-        width: 350px;
+        width: 99%;
         height: 10%;
         justify-content: center;
        
     }
 
-    .about_image{
-        display: none;
+    #about{
+        height: 680px;
+        grid-area:about;
+        margin: 10px 0px 10px 0px;
+        display: flex;
+        justify-content: center
+    
+    
     }
+    
 
     .about_content{
    
-        width: 350px;
+        width: 99%;
         height: 88%;
-    
+        margin-left: 3px;
+
         display: flex;
-        flex-direction:row;
+        flex-direction:column;
     }
 
     .about_text{
-        margin-left: 0px;
-        width: 100%;
+     
+        width: 99%;
         padding-left: 2px;
     
     }
+
+    .about_text p{
+        margin : 2px 4px 2px 4px;
+    
+    }
+
+    #myBtn{
+        margin-left: 4px;
+    }
+
+    .Resume{
+        padding-left: 4px;
+        margin-left: 4px;
+    }
+
+    .Resume-btn{
+        display: flex;
+        height: 50px;
+        width: 200px;
+        background-color: #c3ffe1; 
+        border-radius : 7px;
+        font-family: Poppins-SemiBold;
+      
+        justify-content: center;
+        color : #1f374a;
+        font-weight: 5px;
+        font-size: 15px;
+    
+        box-shadow: inset 0 0 0 0 white;
+        transition: ease-out 0.3s;
+        outline: none;
+    
+    }
+    
+   
 
     .project_title{
         height: 10%;
