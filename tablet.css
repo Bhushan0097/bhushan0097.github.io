@@ -64,6 +64,10 @@ and (max-width: 768px)
         display: flex;
         flex-direction:column;
     }
+
+    #content3{
+        min-height: 900px;   
+    }
    
 }
 

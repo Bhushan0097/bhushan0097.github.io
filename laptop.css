@@ -34,6 +34,10 @@ and (max-width: 1280px)
         flex-direction:column;
     }
 
+    #content3{
+        min-height: 780px; 
+    }
+
 
    
    

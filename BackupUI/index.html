@@ -31,7 +31,7 @@
 <body>
 <br>
     <div class="container text-center">  
-        <h3>Backup UI Tool</h3> 
+        <h3>Template</h3> 
         
           <p id="p1"> </p>
  
@@ -62,20 +62,21 @@
           <label for="inputCalls/Chat">Calls/Chat</label>
           <select id="inputCalls/Chat" class="form-control">
             <option value="Calls">Calls</option>
-            <option value="Chat">Chat</option>
+            <option value="Email">Email</option>
+            <option value="Webex">Webex</option>
          </select>
         </div>
 		     <div class="form-group col-md-4"> </div>
 		    <div class="form-group col-md-4">
-            <label for="inputPhone">Phone Number</label>
-            <input type="text" class="form-control" id="inputPhone" placeholder=" ">
+            <label >Phone Number</label>
+            <input type="text" class="form-control"  placeholder=" ">
           </div>
       </div>
 
         <div class="form-row">
           <div class="form-group col-md-4">
-            <label for="inputETicket">Existing Ticket </label>
-            <select id="inputETicket" class="form-control">
+            <label >Existing Ticket </label>
+            <select class="form-control">
               <option value="No">No</option>
               <option value="Yes">Yes</option>
            </select>
@@ -85,14 +86,14 @@
 
         <div class="form-row">
         <div class="form-group col-md-6" >
-          <label for="inputDescription">Description</label>
+          <label for="inputDescription">Troubleshooting Steps</label>
           <textarea class="form-control" rows="5" id="inputDescription">   </textarea>
         </div>
         
         <div class="form-group col-md-2"> </div>
         <div class="form-group col-md-4">
-          <label for="inputSDescription">Short Description</label>
-          <input type="text" class="form-control" id="inputSDescription" placeholder=" ">
+          <label for="inputIssue">Issue</label>
+          <input type="text" class="form-control" id="inputIssue" placeholder=" ">
 		  <br>
 		       <label for="inputKBA">KBA</label>
           <input type="text" class="form-control" id="inputKBA" placeholder=" ">
@@ -102,13 +103,13 @@
 
       <div class="form-row">
         <div class="form-group col-md-4">
-          <label for="Ticket">Ticket Number </label>
-          <input type="text" class="form-control" id="inputTicket" placeholder=" ">
+          <label for="inputKA" >KA Section Refered :  </label>
+          <input type="text" class="form-control" id="inputKA" placeholder=" ">
         </div>
         <div class="form-group col-md-4"> </div>
 
         <div class="form-group col-md-4">
-          <label for="inputResolved">Issue Resolved</label>
+          <label for="inputResolved">Resolved</label>
           <select id="inputResolved" class="form-control">
             <option value="No">No</option>
             <option value="Yes">Yes</option>
@@ -184,31 +185,27 @@ DateTime = document.getElementById("date").innerHTML = d + "/" + m + "/" + y + "
 let saveFile = () => {
 
         // Get the data from each element on the form.
-       const CDSID = document.getElementById('inputCDSID');
-        const Phone = document.getElementById('inputPhone');
+      const CDSID = document.getElementById('inputCDSID');
         const Calls_Chat = document.getElementById('inputCalls/Chat');
-        const ETicket = document.getElementById('inputETicket');
-        const SDescription = document.getElementById('inputSDescription'); 
-        const Ticket = document.getElementById('inputTicket'); 
-        const Description = document.getElementById('inputDescription'); 
+        const Issue = document.getElementById('inputIssue'); 
+        const Troubleshooting = document.getElementById('inputDescription'); 
         const Resolved = document.getElementById('inputResolved'); 
         const Escalalted = document.getElementById('inputEscalalted'); 
         const Escalaltedto = document.getElementById('inputEscalaltedto'); 
-		const KBA = document.getElementById('inputKBA'); 
-        
+		    const KBA = document.getElementById('inputKBA'); 
+        const KA = document.getElementById('inputKA'); 
+
+
         // This variable stores all the data.
         let data = 
-            '\r CDSID: ' + CDSID.value + ' \r\n ' + 
-            'Phone: ' +Phone.value + ' \r\n ' +  
-			'DateTime: ' +DateTime + ' \r\n ' +  
-            'Calls/Chat: ' + Calls_Chat.value + ' \r\n ' + 
-            'Existing Ticket: ' + ETicket.value + ' \r\n ' + 
-            'Short Description: ' + SDescription.value + ' \r\n ' + 
-            'Ticket:' + Ticket.value + ' \r\n ' + 
-            'Description:'  + Description.value + ' \r\n ' + 
-			'Ticket:' + Ticket.value + ' \r\n ' + 
+               "\r User's CDSID: " + CDSID.value + ' \r\n ' + 
+            'Mode of Contact: ' + Calls_Chat.value + ' \r\n ' + 
+            'Issue: ' + Issue.value + ' \r\n ' + 
+            'Troubleshooting Steps :'  + Troubleshooting.value + ' \r\n\n ' + 
+			      'KBA:'  + KBA.value + ' \r\n ' +
+            'KA Section Refered ::'  + KA.value + ' \r\n ' +
             'Resolved:' + Resolved.value + ' \r\n ' + 
-            'Escalalted:'  + Escalalted.value + ' \r\n ' + 
+            'Escalaltion Required:'  + Escalalted.value + ' \r\n ' + 
             'Escalaltedto:'  + Escalaltedto.value + ' \r\n ' ;
         
         // Convert the text to BLOB.
@@ -232,31 +229,26 @@ let saveFile = () => {
 	
 	function copyData() {
 	 // Get the data from each element on the form.
-       const CDSID = document.getElementById('inputCDSID');
-        const Phone = document.getElementById('inputPhone');
+        const CDSID = document.getElementById('inputCDSID');
         const Calls_Chat = document.getElementById('inputCalls/Chat');
-        const ETicket = document.getElementById('inputETicket');
-        const SDescription = document.getElementById('inputSDescription'); 
-        const Ticket = document.getElementById('inputTicket'); 
-        const Description = document.getElementById('inputDescription'); 
+        const Issue = document.getElementById('inputIssue'); 
+        const Troubleshooting = document.getElementById('inputDescription'); 
         const Resolved = document.getElementById('inputResolved'); 
         const Escalalted = document.getElementById('inputEscalalted'); 
         const Escalaltedto = document.getElementById('inputEscalaltedto'); 
-		const KBA = document.getElementById('inputKBA'); 
+		    const KBA = document.getElementById('inputKBA'); 
+        const KA = document.getElementById('inputKA'); 
         
         // This variable stores all the data.
         let data = 
-            '\r CDSID: ' + CDSID.value + ' \r\n ' + 
-            'Phone: ' +Phone.value + ' \r\n ' +  
-			'DateTime: ' +DateTime + ' \r\n ' +  
-            'Calls/Chat: ' + Calls_Chat.value + ' \r\n ' + 
-            'Existing Ticket: ' + ETicket.value + ' \r\n ' + 
-            'Short Description: ' + SDescription.value + ' \r\n ' + 
-			'KBA:'  + KBA.value + ' \r\n ' +
-            'Description:'  + Description.value + ' \r\n ' + 
-			'Ticket:' + Ticket.value + ' \r\n ' + 
+            "\r User's CDSID: " + CDSID.value + ' \r\n ' + 
+            'Mode of Contact: ' + Calls_Chat.value + ' \r\n ' + 
+            'Issue: ' + Issue.value + ' \r\n ' + 
+            'Troubleshooting Steps :'+ '\n' + Troubleshooting.value + ' \r\n\n ' + 
+			      'KBA:'  + KBA.value + ' \r\n ' +
+            'KA Section Refered ::'  + KA.value + ' \r\n ' +
             'Resolved:' + Resolved.value + ' \r\n ' + 
-            'Escalalted:'  + Escalalted.value + ' \r\n ' + 
+            'Escalaltion Required:'  + Escalalted.value + ' \r\n ' + 
             'Escalaltedto:'  + Escalaltedto.value + ' \r\n ' ;
 
 
