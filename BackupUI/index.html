@@ -28,16 +28,16 @@
 
 
 
-<body>
+<body class = "bg-dark">
 <br>
-    <div class="container text-center">  
+    <div class="container  text-center text-white">  
         <h3>Template</h3> 
         
           <p id="p1"> </p>
  
     </div>
         
-    <div class="container">
+    <div class="container  text-white">
         
       <form >
         <div class="form-row">
@@ -59,7 +59,7 @@
 
         <div class="form-row">
         <div class="form-group col-md-4">
-          <label for="inputCalls/Chat">Calls/Chat</label>
+          <label for="inputCalls/Chat">Mode of Contact : </label>
           <select id="inputCalls/Chat" class="form-control">
             <option value="Calls">Calls</option>
             <option value="Email">Email</option>
@@ -75,10 +75,10 @@
 
         <div class="form-row">
           <div class="form-group col-md-4">
-            <label >Existing Ticket </label>
-            <select class="form-control">
-              <option value="No">No</option>
-              <option value="Yes">Yes</option>
+            <label for="inputStatus" >Current Status </label>
+            <select id="inputStatus" class="form-control">
+              <option value="Completed">Completed</option>
+              <option value="Resolved">Resolved</option>
            </select>
           </div>
         
@@ -119,7 +119,7 @@
 
       <div class="form-row">
         <div class="form-group col-md-4">
-          <label for="inputEscalalted">Escalalted :</label>
+          <label for="inputEscalalted">Escalation Required :</label>
           <select id="inputEscalalted" class="form-control">
             <option value="No">No</option>
             <option value="Yes">Yes</option>
@@ -138,15 +138,14 @@
 		 <center>
 			<div class="form-row text-center ">
 		
-			 <div class="form-group col-md-1"> </div>	 
-          <button type="button" class="btn btn-info col-md-2" id="savebutton"  onclick="saveFile()"> Save data to file </button>
+			 <div class="form-group col-md-2"> </div>	 
+          <button type="button" class="btn btn-warning col-md-2 text-white" id="savebutton"  onclick="copyData1()"> Close Ticket </button>
 				 <div class="form-group col-md-1"> </div>	
-          <button type="button" class="btn btn-success col-md-2" id="savebutton"  onclick="copyData()"> &nbsp; &nbsp;&nbsp; Copy &nbsp; &nbsp;&nbsp; </button>
+          <button type="button" class="btn btn-success col-md-2" id="savebutton"  onclick="copyData2()"> &nbsp; &nbsp;&nbsp; Open Ticket &nbsp; &nbsp;&nbsp; </button>
 		 <div class="form-group col-md-1"> </div>
           <button type="button" class="btn btn-danger col-md-2" id="savebutton"  onclick="location.reload()"> &nbsp; &nbsp;&nbsp;Reset &nbsp; &nbsp;&nbsp; </button>
  <div class="form-group col-md-1"> </div>
-			<button type="button" class="btn btn-warning col-md-2" id="savebutton"  onclick="Export()"> &nbsp; &nbsp;&nbsp;Export Logs &nbsp; &nbsp;&nbsp; </button>
-	
+			
 			</div>
 	   	</center>
       </div>
@@ -158,77 +157,6 @@
 
 <script> 
 
-
-const today = new Date();
-const date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
-const time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
-const dateTime = date+' '+time;
-document.getElementById("p1"),innerHTML = dateTime
-
-function addZero(i) {
-  if (i < 10) {i = "0" + i}
-  return i;
-}
-
-var n =  new Date();
-y = n.getFullYear();
-m = n.getMonth() + 1;
-d = n.getDate();
-
-hrs = addZero(n.getHours());
-mins = addZero(n.getMinutes());
-sec = addZero(n.getSeconds());
- 
-
-DateTime = document.getElementById("date").innerHTML = d + "/" + m + "/" + y + " " +  hrs + ":" + mins + ":" + sec ;
-
-let saveFile = () => {
-
-        // Get the data from each element on the form.
-      const CDSID = document.getElementById('inputCDSID');
-        const Calls_Chat = document.getElementById('inputCalls/Chat');
-        const Issue = document.getElementById('inputIssue'); 
-        const Troubleshooting = document.getElementById('inputDescription'); 
-        const Resolved = document.getElementById('inputResolved'); 
-        const Escalalted = document.getElementById('inputEscalalted'); 
-        const Escalaltedto = document.getElementById('inputEscalaltedto'); 
-		    const KBA = document.getElementById('inputKBA'); 
-        const KA = document.getElementById('inputKA'); 
-
-
-        // This variable stores all the data.
-        let data = 
-               "\r User's CDSID: " + CDSID.value + ' \r\n ' + 
-            'Mode of Contact: ' + Calls_Chat.value + ' \r\n ' + 
-            'Issue: ' + Issue.value + ' \r\n ' + 
-            'Troubleshooting Steps :'  + Troubleshooting.value + ' \r\n\n ' + 
-			      'KBA:'  + KBA.value + ' \r\n ' +
-            'KA Section Refered ::'  + KA.value + ' \r\n ' +
-            'Resolved:' + Resolved.value + ' \r\n ' + 
-            'Escalaltion Required:'  + Escalalted.value + ' \r\n ' + 
-            'Escalaltedto:'  + Escalaltedto.value + ' \r\n ' ;
-        
-        // Convert the text to BLOB.
-        const textToBLOB = new Blob([data], { type: 'text/plain' });
-        const sFileName =  DateTime+" "+CDSID.value +'.txt';	   // The file to save the data.
-  
-        let newLink = document.createElement("a");
-        newLink.download = sFileName;
-  
-        if (window.webkitURL != null) {
-            newLink.href = window.webkitURL.createObjectURL(textToBLOB);
-        }
-        else {
-            newLink.href = window.URL.createObjectURL(textToBLOB);
-            newLink.style.display = "none";
-            document.body.appendChild(newLink);
-        }
-  
-        newLink.click(); 
-    }
-	
-	function copyData() {
-	 // Get the data from each element on the form.
         const CDSID = document.getElementById('inputCDSID');
         const Calls_Chat = document.getElementById('inputCalls/Chat');
         const Issue = document.getElementById('inputIssue'); 
@@ -236,24 +164,50 @@ let saveFile = () => {
         const Resolved = document.getElementById('inputResolved'); 
         const Escalalted = document.getElementById('inputEscalalted'); 
         const Escalaltedto = document.getElementById('inputEscalaltedto'); 
+        const Status = document.getElementById('inputStatus'); 
 		    const KBA = document.getElementById('inputKBA'); 
         const KA = document.getElementById('inputKA'); 
+
+
+    function copyData1() {
+	 // Get the data from each element on the form.
+ 
         
         // This variable stores all the data.
-        let data = 
-            "\r User's CDSID: " + CDSID.value + ' \r\n ' + 
-            'Mode of Contact: ' + Calls_Chat.value + ' \r\n ' + 
-            'Issue: ' + Issue.value + ' \r\n ' + 
+        let data1 = 
+            "\r User's CDSID : " + CDSID.value + ' \r\n ' + 
+            'Mode of Contact : ' + Calls_Chat.value + ' \r\n ' + 
+            'Issue : ' + Issue.value + ' \r\n \n' + 
             'Troubleshooting Steps :'+ '\n' + Troubleshooting.value + ' \r\n\n ' + 
-			      'KBA:'  + KBA.value + ' \r\n ' +
-            'KA Section Refered ::'  + KA.value + ' \r\n ' +
-            'Resolved:' + Resolved.value + ' \r\n ' + 
-            'Escalaltion Required:'  + Escalalted.value + ' \r\n ' + 
-            'Escalaltedto:'  + Escalaltedto.value + ' \r\n ' ;
+			      'KBA :'  + KBA.value + ' \r\n ' +
+            'KA Section Refered :'  + KA.value + ' \r\n ' +
+            'Current Status :' + Status.value + ' \r\n ' +
+            'Resolved :' + Resolved.value + ' \r\n ' + 
+            'Escalaltion Required :'  + Escalalted.value + ' \r\n ';
+            
 
 
   /* Copy the text inside the text field */
-  navigator.clipboard.writeText(data);
+  navigator.clipboard.writeText(data1);  
+
+    }
+	
+	function copyData2() {
+	         // This variable stores all the data.
+        let data2 = 
+            "\r User's CDSID : " + CDSID.value + ' \r\n ' + 
+            'Mode of Contact : ' + Calls_Chat.value + ' \r\n ' + 
+            'Issue : ' + Issue.value + ' \r\n\n' + 
+            'Troubleshooting Steps :'+ '\n' + Troubleshooting.value + ' \r\n\n ' + 
+			      'KBA :'  + KBA.value + ' \r\n ' +
+            'KA Section Refered :'  + KA.value + ' \r\n ' +
+            'Resolved :' + Resolved.value + ' \r\n ' + 
+            'Escalaltion Required :'  + Escalalted.value + ' \r\n ' + 
+            'Escalalted to :'  + Escalaltedto.value + ' \r\n ' ;
+
+
+  /* Copy the text inside the text field */
+  navigator.clipboard.writeText(data2);
   }
   
  
