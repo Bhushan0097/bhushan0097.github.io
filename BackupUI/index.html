@@ -44,7 +44,7 @@
           <div class="form-group col-md-4 ">
 		  
 	
-            <label for="inputCDSID">CDSID </label>
+            <label for="inputCDSID"> <b> CDSID </label>
             <input type="text" class="form-control" id="inputCDSID" placeholder=" ">
 		
           </div>
@@ -56,11 +56,13 @@
            
           </div>
         </div>
+        <br>
 
         <div class="form-row">
         <div class="form-group col-md-4">
           <label for="inputCalls/Chat">Mode of Contact : </label>
           <select id="inputCalls/Chat" class="form-control">
+		  <option value=" ">-- Select --</option>
             <option value="Calls">Calls</option>
             <option value="Email">Email</option>
             <option value="Webex">Webex</option>
@@ -72,17 +74,21 @@
             <input type="text" class="form-control"  placeholder=" ">
           </div>
       </div>
+      <br>
 
         <div class="form-row">
           <div class="form-group col-md-4">
             <label for="inputStatus" >Current Status </label>
             <select id="inputStatus" class="form-control">
+				<option value=" ">-- Select --</option>
               <option value="Completed">Completed</option>
               <option value="Resolved">Resolved</option>
            </select>
           </div>
         
         </div>
+
+        <br>
 
         <div class="form-row">
         <div class="form-group col-md-6" >
@@ -101,6 +107,8 @@
         
       </div>
 
+      <br>
+
       <div class="form-row">
         <div class="form-group col-md-4">
           <label for="inputKA" >KA Section Refered :  </label>
@@ -111,16 +119,20 @@
         <div class="form-group col-md-4">
           <label for="inputResolved">Resolved</label>
           <select id="inputResolved" class="form-control">
+		  <option value=" ">-- Select --</option>
             <option value="No">No</option>
             <option value="Yes">Yes</option>
          </select>
         </div>
       </div>
 
+      <br>
+
       <div class="form-row">
         <div class="form-group col-md-4">
           <label for="inputEscalalted">Escalation Required :</label>
           <select id="inputEscalalted" class="form-control">
+		  <option value=" ">-- Select --</option>
             <option value="No">No</option>
             <option value="Yes">Yes</option>
          </select>
@@ -209,13 +221,6 @@
   /* Copy the text inside the text field */
   navigator.clipboard.writeText(data2);
   }
-  
  
-  
-
-
-
-  
-  
   </script>
 </html>
