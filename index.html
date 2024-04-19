@@ -1,45 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="style.css">
- 
+
     <link rel="stylesheet" type="text/css" href="mobile.css">
     <link rel="stylesheet" type="text/css" href="tablet.css">
     <link rel="stylesheet" type="text/css" href="laptop.css">
-   
-   
+
+
 
     <link rel="stylesheet" type="text/css" href="font.css">
 
-    <link rel ="stylesheet" type="text/css" href="assests/fontawesome/css/all.css"></link>
+    <link rel="stylesheet" type="text/css" href="assests/fontawesome/css/all.css">
+    </link>
 
     <!-- Swiper -->
     <link rel="stylesheet" type="text/css" href="swiper-bundle.min.css">
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <script>
+        $(document).ready(function ()
+        {
+            $("#div1").load("http://aws-s28-1.s3-website.us-east-2.amazonaws.com/loader.html");
+
+        });
+    </script>
+
 
     <title>Portfolio</title>
 </head>
+
 <body>
 
     <div class="container">
-        <nav class ="navbar">
+        <nav class="navbar">
             <a href="#" class="nav-branding"> </a>
             <ul class="nav-menu">
-                <li class="nav-item"> <a href="#Home" class="nav-link">Home   </a>  </li>&nbsp; 
-                <li class="nav-item"> <a href="#About" class="nav-link">About  </a> </li>&nbsp; 
-                <li class="nav-item"> <a href="#Projects" class="nav-link">Projects </a> </li>&nbsp; 
-                <li class="nav-item"> <a href="#Skills" class="nav-link">Skills </a> </li>&nbsp; 
-                <li class="nav-item"> <a href="#Resume" class="nav-link">Resume </a> </li>&nbsp; 
-                <li class="nav-item"> <a href="#Contact" class="nav-link">Contact </a></li>&nbsp; 
-            
+                <li class="nav-item"> <a href="#Home" class="nav-link">Home </a> </li>&nbsp;
+                <li class="nav-item"> <a href="#About" class="nav-link">About </a> </li>&nbsp;
+                <li class="nav-item"> <a href="#Projects" class="nav-link">Projects </a> </li>&nbsp;
+                <li class="nav-item"> <a href="#Skills" class="nav-link">Skills </a> </li>&nbsp;
+                <li class="nav-item"> <a href="#Resume" class="nav-link">Resume </a> </li>&nbsp;
+                <li class="nav-item"> <a href="#Contact" class="nav-link">Contact </a></li>&nbsp;
+
             </ul>
 
-      
+
             <div class="hamburger">
-              
+
                 <span class="bar"></span>
                 <span class="bar"></span>
                 <span class="bar"></span>
@@ -47,261 +60,365 @@
             </div>
 
         </nav>
-        <main>      
-            
-            <div class="ProfileBox"> 
+        <main>
+
+            <div class="ProfileBox">
                 <div class="ProfileBox_bg"></div>
-               <div class="ProfileImage"> </div>
-              <div class="ProfileImage_inner"> </div> 
-              <div class="ProfileImage_inner2"> </div> 
-               <div class="ProfileMain"> 
-                <p class="name"> BUDDHABHUSHAN NAGRALE </p> 
-                 <p class="aim">Aspiring DevOps Engineer</p>
+                <div class="ProfileImage"> </div>
+                <div class="ProfileImage_inner"> </div>
+                <div class="ProfileImage_inner2"> </div>
+                <div class="ProfileMain">
+                    <p class="name"> BUDDHABHUSHAN NAGRALE </p>
+                    <p class="aim">Aspiring DevOps Engineer</p>
 
-                 <br>
+                    <br>
 
-                 <div class = "profile_icons"> 
-                    <span class="icons_profile"> <i class="fa-brands fa-github"> </i> &nbsp; 
-                        <i class="fa-brands fa-linkedin"></i> &nbsp;  
-                      <i class="fa-brands fa-instagram"></i>
-                    </span> 
+                    <div class="profile_icons">
+                        <span class="icons_profile"> <i class="fa-brands fa-github"> </i> &nbsp;
+                            <i class="fa-brands fa-linkedin"></i> &nbsp;
+                            <i class="fa-brands fa-instagram"></i>
+                        </span>
+                    </div>
                 </div>
+
             </div>
-        
-            </div>
-            
+
         </main>
 
-        <div id = "about">
+        <div id="about">
             <div class="about_main">
-          
-                <div class = "about_title">  </div>
-                <div class = "about_content">
-         
-                    <div class = "about_text"> <h3>  About Me  </h3>
-                        
-                    </p>
+
+                <div class="about_title"> </div>
+                <div class="about_content">
+
+                    <div class="about_text">
+                        <h3> About Me </h3>
+                        <p> <br> <br>
+                            I'm [Your Name], an enthusiastic aspiring DevOps engineer passionate about optimizing
+                            software development. Armed with a strong background in computer science, I've cultivated
+                            proficiency in Python, Java, and key DevOps tools like Jenkins and Ansible. My journey
+                            emphasizes collaboration and efficiency, evident in my work streamlining CI/CD pipelines and
+                            deploying containerized applications with Docker and Kubernetes.
+
+                            <br> <br>
+
+                            My portfolio showcases projects where I've implemented scalable infrastructure solutions,
+                            ensuring seamless application deployment. With a proactive learning mindset, I'm poised to
+                            contribute to transformative DevOps practices, driving innovation and efficiency in every
+                            project I undertake.
+                        </p>
                     </div>
-                    <div class="Resume">  <div class="Resume-btn"> <div class="btn-centr"><i class="fa-solid fa-file"></i> &nbsp  DOWNLOAD RESUME </div></div></div>
+                    <div class="Resume">
+                        <div class="Resume-btn">
+                            <div class="btn-centr"><i class="fa-solid fa-file"></i> &nbsp DOWNLOAD RESUME </div>
+                        </div>
+                    </div>
 
 
-                </div> 
+                </div>
             </div>
         </div>
 
 
- 
-        <div id = "content1">
-                <div class ="project_bg"> 
-                    <div class = "project_title">  <p class="space_title">  PROJECTS   </p></div>
-                    <div class ="project_cards"> 
-                        <div class="card_main">
-                            
-                        </div>
 
-                        <div class="card_main">
+        <div id="content1">
+            <div class="project_bg">
+                <div class="project_title">
+                    <p class="space_title"> PROJECTS </p>
+                </div>
 
-                        </div>
-                     
-                       
+                <div class="project_cards">
+                    <div id="div1"> </div>
+                    <div class="card_main">
+
                     </div>
-                
-                 </div>
+                    <div class="card_main">
+
+                    </div>
+
+                    <div class="card_main">
+
+                    </div>
+
+
+
+                </div>
+
+            </div>
         </div>
 
 
 
-        <div id = "content2">
-            <div class ="skill">
-            <div class = "skill_title">  <p class="space_title">  SKILLS   </p></div>
-            <div class = "skill_set"> 
-                <div class = "skill_in"> 
+        <div id="content2">
+            <div class="skill">
+                <div class="skill_title">
+                    <p class="space_title"> SKILLS </p>
+                </div>
+                <div class="skill_set">
+                    <div class="skill_in">
 
-                        <div class="skill_container"> 
-                            
-                             <div class="skill_box2">
-                                <div class="skill_name"> <p> JAVA </p></div>
+                        <div class="skill_container">
+
+                            <div class="skill_box2">
+                                <div class="skill_name">
+                                    <p> Python </p>
+                                </div>
                                 <div class="skill_level">
                                     <div class="skill-bar">
-                                            <span class="skill-per Java">
-                                                <span class="tooltip">80%</span>
-                                            </span> 
-                                    </div>     
-                                   
-                                </div>
-
-                               
-                             </div>
-                        </div>
-
-                        <div class="skill_container"> 
-                        
-                             <div class="skill_box2">
-                                <div class="skill_name"> <p> PYTHON </p></div>
-                                <div class="skill_level">
-                                    <div class="skill-bar">
-                                            <span class="skill-per Python">
-                                                <span class="tooltip">70%</span>
-                                            </span> 
-                                    </div>     
-                                   
-                                </div>
-
-                              
-                             </div>
-                        </div>
-
-                        <div class="skill_container"> 
-                          
-                             <div class="skill_box2">
-                                <div class="skill_name"> <p> MYSQL </p></div>
-                                <div class="skill_level">
-                                    <div class="skill-bar">
-                                            <span class="skill-per MySql">
-                                                <span class="tooltip">65%</span>
-                                            </span> 
-                                    </div>     
-                                   
-                                </div>
-
-                               
-                             </div>
-                        </div>
-
-
-                        <div class="skill_container"> 
-                          
-                             <div class="skill_box2">
-                                <div class="skill_name"> <p> HTML/CSS </p></div>
-                                <div class="skill_level">
-                                    <div class="skill-bar">
-                                            <span class="skill-per html_css">
-                                                <span class="tooltip">60%</span>
-                                            </span> 
-                                    </div>     
-                                   
-                                </div>
-
-                                
-                             </div>
-                        </div>
-
-
-                        <div class="skill_container"> 
-                         
-                             <div class="skill_box2">
-                                <div class="skill_name"> <p> Software Testing </p></div>
-                                <div class="skill_level">
-                                    <div class="skill-bar">
-                                            <span class="skill-per Software_Testing">
-                                                <span class="tooltip">60%</span>
-                                            </span> 
-                                    </div>     
-                                   
-                                </div>
-
-                                
-                             </div>
-                        </div>
-                 </div>    
-            </div>  
-            </div>    
-        </div>
-
-        <div id = "content3"> <div class ="work_bg"> <div class="work_title"> <p class="space_title">  Work Experience  </p> </div>
-
-                                <div class="work_text"> <div class="exp"><p> Service Desk Analyst </p> <h4>- HCL Tech. </h4> <br>  </div>
-                                                        <div class="exp"> <h5> <i class="fa fa-calendar" aria-hidden="true"></i> &nbsp March 2021 - June 2023 </h5> <br>  </div>
-                                
-                                    <div class ="work_desc"> 
-                                        <ul>
-                                            <li>Responding to customer inquiries via multiple channels like phone,or chat</li>
-                                            <li>Troubleshooting and resolving technical issues related to hardware, software, and networks. </li>
-                                            <li>Escalating complex issues to higher-level support teams as necessary. </li>
-                                            <li>Documenting customer interactions and problem resolution.
-                                            <li>Following established procedures for incident management and problem resolution.</li>
-                                            <li>Maintaining a high level of customer satisfaction by promptly and professionally handling customer inquiries and complaints.</li>
-                            
-                                        </ul>   
-                              
-                                   
+                                        <span class="skill-per Java">
+                                            <span class="tooltip">80%</span>
+                                        </span>
                                     </div>
+
                                 </div>
 
-                            <div class="work_text"> <div class="exp"><p> IOT intern </p> <h4>- Anvi Infotech </h4> <br>  </div>
-                                        <div class="exp"> <h5> <i class="fa fa-calendar" aria-hidden="true"></i> &nbsp August 2018 - March 2019 </h5> <br>  </div>
-                                        <div class ="work_desc"> 
-                                            <ul>
-                                                <li>Responding to customer inquiries via multiple channels like phone,or chat</li>
-                                                <li>Troubleshooting and resolving technical issues related to hardware, software, and networks. </li>
-                                                <li>Escalating complex issues to higher-level support teams as necessary. </li>
-                                                <li>Documenting customer interactions and problem resolution.
-                                               
-                                            </ul>                                                                     
-                                        </div>
+
                             </div>
-                            <div class="work_text"> <div class="exp"><p> Network Engineer Intern </p> <h4>- B.S.N.L </h4> <br>  </div>
-                                        <div class="exp"> <h5> <i class="fa fa-calendar" aria-hidden="true"></i> &nbsp May 2018 - June 2018 </h5> <br>  </div>
-                                        <div class ="work_desc"> 
-                                            <ul>
-                                                <li>Responding to customer inquiries via multiple channels like phone,or chat</li>
-                                                <li>Troubleshooting and resolving technical issues related to hardware, software, and networks. </li>
-                                                <li>Escalating complex issues to higher-level support teams as necessary. </li>
-                                                <li>Documenting customer interactions and problem resolution.
-                                                
-                                            </ul>   
+                        </div>
 
-                                        </div>
+                        <div class="skill_container">
+
+                            <div class="skill_box2">
+                                <div class="skill_name">
+                                    <p> MYSQL </p>
+                                </div>
+                                <div class="skill_level">
+                                    <div class="skill-bar">
+                                        <span class="skill-per Python">
+                                            <span class="tooltip">70%</span>
+                                        </span>
+                                    </div>
+
+                                </div>
+
+
                             </div>
-                                
-                             </div>
+                        </div>
 
-                             
-        </div>
-        
-        
-        <div id = "content4"> 
-           <div class="academics">
-            <div class ="education_bg"> 
-                <div class="ed_tittle"> <p class="space_title" >  EDUCATION  </p> </div>
-                <div class="ed_container">
-                        <div class = "ed"> 
-                            <div class="parent"> 
-                                <div class="a"><p> B.E(Computer Tech.) </p> </div> <div class="marks"> <p>7.8 CGPA &nbsp;&nbsp;</p></div>  </div> 
-                            <div class="parent"> 
-                                <div class="a"> <h4>Nagpur University </h4> </div> <div class="marks"> <h4>2015-2019 &nbsp;&nbsp;</h4></div>  </div> 
-                                <h5>K.D.K College of Engineering </h5> 
+                        <div class="skill_container">
+
+                            <div class="skill_box2">
+                                <div class="skill_name">
+                                    <p> BASH </p>
+                                </div>
+                                <div class="skill_level">
+                                    <div class="skill-bar">
+                                        <span class="skill-per MySql">
+                                            <span class="tooltip">65%</span>
+                                        </span>
+                                    </div>
+
+                                </div>
+
+
+                            </div>
                         </div>
 
 
-                        <div class = "ed">  
-                            <div class="parent"> 
-                                <div class="a"><p> HSC </p>  </div> <div class="marks"> <p>67% &nbsp;&nbsp;</p></div>  </div> 
-                            <div class="parent"> 
-                                <div class="a"> <h4>Maharashtra Board  </h4>  </div> <div class="marks"> <h4>2014-2015 &nbsp;&nbsp;</h4></div>  </div> 
-                                <h5>Shri. Niketan Jr. College </h5> 
+                        <div class="skill_container">
+
+                            <div class="skill_box2">
+                                <div class="skill_name">
+                                    <p> HTML/CSS </p>
+                                </div>
+                                <div class="skill_level">
+                                    <div class="skill-bar">
+                                        <span class="skill-per html_css">
+                                            <span class="tooltip">60%</span>
+                                        </span>
+                                    </div>
+
+                                </div>
+
+
+                            </div>
                         </div>
 
-                        <div class = "ed"> 
-                            <div class="parent"> 
-                                <div class="a"> <p> SSC </p>   </div> <div class="marks"> <p>7.8 CGPA &nbsp;&nbsp;</p></div>  </div> 
-                           <div class="parent"> 
-                                <div class="a"> <h4>C.B.S.E </h4>  </div> <div class="marks"> <h4>2013-2014 &nbsp;&nbsp;</h4></div>  </div> 
-                            <h5>Mont-Fort School </h5> 
+
+                        <div class="skill_container">
+
+                            <div class="skill_box2">
+                                <div class="skill_name">
+                                    <p> Linux </p>
+                                </div>
+                                <div class="skill_level">
+                                    <div class="skill-bar">
+                                        <span class="skill-per Linux">
+                                            <span class="tooltip">30%</span>
+                                        </span>
+                                    </div>
+
+                                </div>
+
+
+                            </div>
                         </div>
-                </div>    
-            
+                    </div>
+                </div>
             </div>
-            <div class ="certification_bg"> <p class="space_title">  CERTIFICATIONS  </p>   </div>
+        </div>
+
+        <div id="content3">
+            <div class="work_bg">
+                <div class="work_title">
+                    <p class="space_title"> Work Experience </p>
+                </div>
+
+                <div class="work_text">
+                    <div class="exp">
+                        <p> Service Desk Analyst </p>
+                        <h4>- HCL Tech. </h4> <br>
+                    </div>
+                    <div class="exp">
+                        <h5> <i class="fa fa-calendar" aria-hidden="true"></i> &nbsp March 2021 - June 2023 </h5> <br>
+                    </div>
+
+                    <div class="work_desc">
+                        <ul>
+                            <li>Responding to customer inquiries via multiple channels like phone,or chat</li>
+                            <li>Troubleshooting and resolving technical issues related to hardware, software, and
+                                networks. </li>
+                            <li>Escalating complex issues to higher-level support teams as necessary. </li>
+                            <li>Documenting customer interactions and problem resolution.
+                            <li>Following established procedures for incident management and problem resolution.</li>
+                            <li>Maintaining a high level of customer satisfaction by promptly and professionally
+                                handling customer inquiries and complaints.</li>
+
+                        </ul>
+
+
+                    </div>
+                </div>
+
+                <div class="work_text">
+                    <div class="exp">
+                        <p> IOT intern </p>
+                        <h4>- Anvi Infotech </h4> <br>
+                    </div>
+                    <div class="exp">
+                        <h5> <i class="fa fa-calendar" aria-hidden="true"></i> &nbsp August 2018 - March 2019 </h5> <br>
+                    </div>
+                    <div class="work_desc">
+                        <ul>
+                            <li>Responding to customer inquiries via multiple channels like phone,or chat</li>
+                            <li>Troubleshooting and resolving technical issues related to hardware, software, and
+                                networks. </li>
+                            <li>Escalating complex issues to higher-level support teams as necessary. </li>
+                            <li>Documenting customer interactions and problem resolution.
+
+                        </ul>
+                    </div>
+                </div>
+                <div class="work_text">
+                    <div class="exp">
+                        <p> Network Engineer Intern </p>
+                        <h4>- B.S.N.L </h4> <br>
+                    </div>
+                    <div class="exp">
+                        <h5> <i class="fa fa-calendar" aria-hidden="true"></i> &nbsp May 2018 - June 2018 </h5> <br>
+                    </div>
+                    <div class="work_desc">
+                        <ul>
+                            <li>Responding to customer inquiries via multiple channels like phone,or chat</li>
+                            <li>Troubleshooting and resolving technical issues related to hardware, software, and
+                                networks. </li>
+                            <li>Escalating complex issues to higher-level support teams as necessary. </li>
+                            <li>Documenting customer interactions and problem resolution.
+
+                        </ul>
+
+                    </div>
+                </div>
+
+            </div>
+
+
+        </div>
+
+
+        <div id="content4">
+            <div class="academics">
+                <div class="education_bg">
+                    <div class="ed_tittle">
+                        <p class="space_title"> EDUCATION </p>
+                    </div>
+                    <div class="ed_container">
+                        <div class="ed">
+                            <div class="parent">
+                                <div class="a">
+                                    <p> B.E(Computer Tech.) </p>
+                                </div>
+                                <div class="marks">
+                                    <p>7.8 CGPA &nbsp;&nbsp;</p>
+                                </div>
+                            </div>
+                            <div class="parent">
+                                <div class="a">
+                                    <h4>Nagpur University </h4>
+                                </div>
+                                <div class="marks">
+                                    <h4>2015-2019 &nbsp;&nbsp;</h4>
+                                </div>
+                            </div>
+                            <h5>K.D.K College of Engineering </h5>
+                        </div>
+
+
+                        <div class="ed">
+                            <div class="parent">
+                                <div class="a">
+                                    <p> HSC </p>
+                                </div>
+                                <div class="marks">
+                                    <p>67% &nbsp;&nbsp;</p>
+                                </div>
+                            </div>
+                            <div class="parent">
+                                <div class="a">
+                                    <h4>Maharashtra Board </h4>
+                                </div>
+                                <div class="marks">
+                                    <h4>2014-2015 &nbsp;&nbsp;</h4>
+                                </div>
+                            </div>
+                            <h5>Shri. Niketan Jr. College </h5>
+                        </div>
+
+                        <div class="ed">
+                            <div class="parent">
+                                <div class="a">
+                                    <p> SSC </p>
+                                </div>
+                                <div class="marks">
+                                    <p>7.8 CGPA &nbsp;&nbsp;</p>
+                                </div>
+                            </div>
+                            <div class="parent">
+                                <div class="a">
+                                    <h4>C.B.S.E </h4>
+                                </div>
+                                <div class="marks">
+                                    <h4>2013-2014 &nbsp;&nbsp;</h4>
+                                </div>
+                            </div>
+                            <h5>Mont-Fort School </h5>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="certification_bg">
+                    <p class="space_title"> CERTIFICATIONS </p>
+                </div>
             </div>
         </div>
-   
+
 
         <footer>Footer</footer>
 
 
-    <script src="script.js"></script>
-    <script src="swiper-bundle.min.js"></script>
-  
+        <script src="script.js"></script>
+        <script src="swiper-bundle.min.js"></script>
+
 </body>
+
 </html>
