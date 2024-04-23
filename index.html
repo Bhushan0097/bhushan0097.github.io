@@ -10,6 +10,7 @@
     <link rel="stylesheet" type="text/css" href="mobile.css">
     <link rel="stylesheet" type="text/css" href="tablet.css">
     <link rel="stylesheet" type="text/css" href="laptop.css">
+    <link rel="stylesheet" type="text/css" href="carousel.css">
 
 
 
@@ -23,13 +24,6 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 
-    <script>
-        $(document).ready(function ()
-        {
-            $("#div1").load("http://aws-s28-1.s3-website.us-east-2.amazonaws.com/loader.html");
-
-        });
-    </script>
 
 
     <title>Portfolio</title>
@@ -94,7 +88,7 @@
                     <div class="about_text">
                         <h3> About Me </h3>
                         <p> <br> <br>
-                            I'm [Your Name], an enthusiastic aspiring DevOps engineer passionate about optimizing
+                            I'm Buddhabhushan, an enthusiastic aspiring DevOps engineer passionate about optimizing
                             software development. Armed with a strong background in computer science, I've cultivated
                             proficiency in Python, Java, and key DevOps tools like Jenkins and Ansible. My journey
                             emphasizes collaboration and efficiency, evident in my work streamlining CI/CD pipelines and
@@ -128,16 +122,21 @@
                 </div>
 
                 <div class="project_cards">
-                    <div id="div1"> </div>
-                    <div class="card_main">
+                    <div class="carousel-container">
+                        <div class="carousel">
+                            <div class="carousel-item">
 
-                    </div>
-                    <div class="card_main">
+                            </div>
+                            <div class="carousel-item">
 
-                    </div>
+                            </div>
+                            <div class="carousel-item">
 
-                    <div class="card_main">
-
+                            </div>
+                            <!-- Add more carousel items as needed -->
+                        </div>
+                        <button class="prev" onclick="prevSlide()">&#10094;</button>
+                        <button class="next" onclick="nextSlide()">&#10095;</button>
                     </div>
 
 
